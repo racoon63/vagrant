@@ -6,7 +6,6 @@ yum install -y curl \
                git \
                python3 \
                python3-pip \
-               sudo \
                wget
 
 # Install virtualbox guest additions
