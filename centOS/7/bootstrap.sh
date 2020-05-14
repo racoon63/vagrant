@@ -2,11 +2,16 @@
 
 # Update and install basic tools
 yum update -y
+yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
 yum install -y curl \
                git \
                python3 \
                python3-pip \
-               wget
+               wget \
+               yum-utils
+yum install -y docker-ce \
+               docker-ce-cli \
+               containerd.io
 
 # Install virtualbox guest additions
 wget http://download.virtualbox.org/virtualbox/4.3.8/VBoxGuestAdditions_4.3.8.iso
